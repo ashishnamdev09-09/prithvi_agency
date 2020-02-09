@@ -11,8 +11,41 @@
 			
 				<tbody>
 					<tr>
-							<td><label>Product Category:</label></td>
-							<td><input type="text" name="pc_id" id="pc_id"></td>
+							<td><label>Product Category ID:</label></td>
+							<td>
+                    <select name="pc_id" id="pc_id">
+                        <option value="">--Select--</option>
+                        <?php
+                        include_once("../db_connection.php");
+                        $sql=$conn->prepare("SELECT *FROM product_category");
+                        
+                        $sql->execute();
+                        $result=$sql->get_result();
+                        while($row=$result->fetch_assoc())
+                        {
+                            ?>
+                            <option value="<?php echo $row['pc_id'];?> ">
+                            <?php echo $row['pc_name'];?>   
+                                
+                            </option>
+                            <?php
+                        }
+                        ?>
+                        
+                        
+                    
+                                                
+                                                                                                
+                    </select>
+							    
+							    
+							    
+							    
+							    
+							    
+							    
+							    
+							</td>
 					</tr>
 			
 			

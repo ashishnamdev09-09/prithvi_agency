@@ -30,7 +30,8 @@
             
             <tr>
             <td>CONTACT</td>
-            <td><input type="text" name="ad_contact" id="ad_contact" value="<?php echo $row['ad_contact'];?>"></td>
+            <td><input type="text" name="ad_contact" id="ad_contact" 
+            value="<?php echo $row['ad_contact'];?>"></td>
              </tr>   
             
             

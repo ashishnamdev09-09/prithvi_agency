@@ -29,7 +29,34 @@
         <table border="3">
             <tr>
                 <td>Main category ID</td>
-                <td><input type="text" name="mc_id" id="mc_id" value="<?php echo $row['mc_id'];?>"></td>
+                <td><select name="mc_id" id="mc_id">
+                                <option value="">--Select--</option>
+                                <?php
+                            include_once("../db_connection.php");
+                            $sql1=$conn->prepare("SELECT *FROM main_category");
+                            
+                            $sql1->execute();
+                            $result1=$sql1->get_result();
+                            while($row1=$result1->fetch_assoc())
+                            {
+                            ?> 
+                            <option value="<?php echo $row1['mc_id'];?>"
+                            <?php
+                                if($row['mc_id']==$row1['mc_id'])
+                                {
+                                    ?>
+                                    Selected
+                                    <?php
+                                }
+                                ?>
+                            >
+                          
+                            <?php echo $row1['mc_name'];?>
+                                    </option>  
+                            <?php
+                            }
+                            ?>
+                                </select></td>
                 
             </tr>
             

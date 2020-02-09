@@ -32,7 +32,7 @@
 			<?php
 				include_once("../db_connection.php");
 				$sno=1;
-				$sql=$conn->Prepare ("SELECT * FROM product_details");
+				$sql=$conn->Prepare ("SELECT * FROM product_details,product_category WHERE product_details.pc_id=product_category.pc_id");
 				$sql->execute();
 				$result=$sql->get_result();
 				while ($row=$result->fetch_assoc()) 
@@ -40,7 +40,7 @@
 			  ?>
 			  <tr>
 			 		<td><?php echo $sno++;?></td>
-			  		<td><?php echo $row["pc_id"];?></td>
+			  		<td><?php echo $row["pc_name"];?></td>
 			  		<td><?php echo $row["pd_name"];?></td>
 			  		<td><?php echo $row["pd_sku_code"];?></td>
 			  		<td><?php echo $row["pd_tax_percent"];?></td>

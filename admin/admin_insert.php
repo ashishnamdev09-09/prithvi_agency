@@ -18,7 +18,7 @@
             alert('Record Inserted');
             window.location='admin_view.php';
             </script>";
-			# code...
+			
 		}
 		else
 		{

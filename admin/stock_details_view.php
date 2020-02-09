@@ -36,7 +36,7 @@
 			<?php
 				include_once("../db_connection.php");
 				$sno=1;
-				$sql=$conn->Prepare ("SELECT * FROM stock_details");
+				$sql=$conn->Prepare ("SELECT * FROM stock_details,product_details WHERE stock_details.pd_id=product_details.pd_id");
 				$sql->execute();
 				$result=$sql->get_result();
 				while ($row=$result->fetch_assoc()) 
@@ -44,7 +44,7 @@
 			  ?>
 			  <tr>
 			 		<td><?php echo $sno++;?></td>
-			  		<td><?php echo $row["pd_id"];?></td>
+			  		<td><?php echo $row["pd_name"];?></td>
 			  		<td><?php echo $row["sd_avail_qty"];?></td>
 			  		<td><?php echo $row["sd_min_order_qty"];?></td>
 			  		<td><?php echo $row["sd_mrp"];?></td>

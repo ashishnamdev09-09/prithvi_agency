@@ -11,7 +11,35 @@
 				<tbody>
 					<tr>
 							<td><label>Product id:</label></td>
-							<td><input type="text" name="pd_id" id="pd_id"></td>
+							<td>
+                   <select name="pd_id" id="pd_id">
+                        <option value="">--Select--</option>
+                        <?php
+                        include_once("../db_connection.php");
+                        $sql=$conn->prepare("SELECT *FROM product_details");
+                        
+                        $sql->execute();
+                        $result=$sql->get_result();
+                        while($row=$result->fetch_assoc())
+                        {
+                            ?>
+                            <option value="<?php echo $row['pd_id'];?> ">
+                            <?php echo $row['pd_name'];?>   
+                                
+                            </option>
+                            <?php
+                        }
+                        ?>
+                        
+                        
+                    
+                                                
+                                                                                                
+                    </select>
+							    s
+                    
+
+							</td>
 					</tr>
 			
 			

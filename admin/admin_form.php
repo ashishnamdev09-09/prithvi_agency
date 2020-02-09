@@ -4,15 +4,19 @@
 	<title>Document</title>
 	
 	<style>
+        
+        
         .input_grp input{
-            border-radius: 5px;
+            border-radius: 10px;
+        
         }
         
         .input_grp label{
-                font-size: 25px;    
+             
+                font-size: 22px;    
         }
         #ad_address{
-            border-radius: 6px;
+            border-radius: 10px;
         }
         
         
@@ -41,7 +45,7 @@
 					<tr>
 			
 						<td><label>Address:</label></td>
-						<td><textarea name="ad_address" id="ad_address" style="margin: 0px; width: 168px; height: 38px;"></textarea></td>
+						<td><textarea name="ad_address" id="ad_address" style="margin: 0px; width: 155px; height: 39px;"></textarea></td>
 					</tr>
 					<tr>
 						<td><label>Email:</label></td>
@@ -61,9 +65,9 @@
 					</tr>
 					<tr>
 					<td></td>
-						<td ><input type="submit" value="submit">
-						<input type="reset" value="reset">
-						<input type="button" value="cancel" onclick="window.location.href='admin_view.php'">
+						<td ><input type="submit" value="Submit">
+						<input type="reset" value="Reset">
+						<input type="button" value="Cancel" onclick="window.location.href='admin_view.php'">
 						</td>
 						
 					</tr>

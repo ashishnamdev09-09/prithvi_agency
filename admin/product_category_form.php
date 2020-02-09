@@ -11,7 +11,32 @@
 				<tbody>
 					<tr>
 							<td><label>Main Category id:</label></td>
-							<td><input type="text" name="mc_id" id="mc_id"></td>
+							<td>
+							    
+							    <select name="mc_id" id="mc_id">
+                                <option value="">--Select Category--</option>
+                                <?php
+                            include_once("../db_connection.php");
+                            $sql=$conn->prepare("SELECT *FROM main_category");
+                            
+                            $sql->execute();
+                            $result=$sql->get_result();
+                            while($row=$result->fetch_assoc())
+                            {
+                            ?> 
+                            <option value="<?php echo $row['mc_id'];?>">
+                            <?php echo $row['mc_name'];?>
+                            <?php echo $row['mc_name'];?>
+                                    </option>  
+                            <?php
+                            }
+                            ?>
+                                </select>        
+                                    
+                                    
+                                    
+                          
+							</td>
 					</tr>
 			
 			

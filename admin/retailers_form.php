@@ -5,10 +5,10 @@
 	<style>
         .input_grp input{
 border-radius: 10px;
-            font-size: 20px;
+            font-size: 18px;
         }
         .input_grp label{
-            font-size: 25px;  
+            font-size: 23px;  
             
         }
         .input_grp h1{
@@ -19,11 +19,7 @@ border-radius: 10px;
                 border-radius: 10px;
             font-size: 20px;
         }
-        body{
-            background: linear-gradient(to bottom, #b0e8cc 0%, #b0e8cc 50%, 50%,#80ffbf 50%,#80ffbf 100%);
-        
-        
-        
+     
         </style>
     
 </head>
@@ -56,7 +52,7 @@ border-radius: 10px;
 					</tr>
 					<tr>
 						<td><label>Retailer Address:</label></td>
-						<td ><textarea name="rt_address" id="rt_address" style="margin: 0px; width: 241px; height: 64px;"></textarea></td>
+						<td ><textarea name="rt_address" id="rt_address" style="margin: 0px; width: 221px; height: 69px;"></textarea></td>
 					</tr>
 					<tr>
 						<td><label>Retailer UserName:</label></td>
@@ -72,7 +68,7 @@ border-radius: 10px;
 					</tr>
 					<tr>
 					    <td></td>
-						<td colspan="1"><input type="submit" value="submit">
+						<td><input type="submit" value="submit">
 						<input type="reset" value="reset">
 						<input type="button" value="cancel" onclick="window.location.href='retailers_view.php'">
 						</td>

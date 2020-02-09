@@ -24,7 +24,42 @@
         <table border="3">
             <tr>
                 <td>product category</td>
-                <td><input type="text" name="pc_id" id="pc_id" value="<?php echo $row['pc_id'];?>"></td>
+                <td> <select name="pc_id" id="pc_id">
+                        <option value="">--Select--</option>
+                        <?php
+                        include_once("../db_connection.php");
+                        $sql1=$conn->prepare("SELECT *FROM product_category");
+                        
+                        $sql1->execute();
+                        $result1=$sql1->get_result();
+                        while($row1=$result1->fetch_assoc())
+                        {
+                            ?>
+                            <option value="<?php echo $row1['pc_id'];?> "
+                            <?php
+                            if($row['pc_id']==$row1['pc_id']){
+                                ?>
+                                Selected
+                                <?php
+                            }
+                            ?>
+                            
+                            
+                            
+                            
+                            >
+                            <?php echo $row1['pc_name'];?>   
+                                
+                            </option>
+                            <?php
+                        }
+                        ?>
+                        
+                        
+                        ?>
+                                                
+                                                                                                
+                    </select></td>
                 
             </tr>
             
