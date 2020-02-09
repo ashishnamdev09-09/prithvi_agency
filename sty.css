@@ -1,0 +1,60 @@
+*{margin: 0;padding: 0;}
+body{
+    background-color: #f5683d;
+    padding-top: 24vh;
+}
+
+
+.container-box{
+            width: 250px;
+            height: auto;
+            padding: 45px 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 0 #000;
+            margin:auto;
+            position: relative;
+            
+        }
+
+.admin-img{
+    background: url('admin.png');
+    width:65px;
+    height:65px;
+    background-size: 100%;
+    position: absolute;
+    top:-30px;
+    left: 120px
+}
+
+
+
+.list{
+ list-style-type: none;
+    text-align: center;
+}
+
+.list li{
+    width: 250px;
+    margin-bottom: 15px;
+}
+
+.list li input{
+    width: 250px;
+    text-align: center;
+    padding: 8px 0px;
+    border:none;
+    background-color: #d3d3d3;
+    border-radius: 8px;
+}
+
+
+
+.list li input[type="submit"]{
+    background-color: #4690fb;
+    color: white;
+}
+.list li input[type="reset"]{
+    background-color: #4690fb;
+    color: white;
+}

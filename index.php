@@ -3,27 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <style>
-        a{
-        font-size: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="sty.css">
     
 </head>
 <body>
-      <center> <h1>WELCOME ADMIN</h1></center>
-      <hr/> 
+ <form action="login_check.php" method="post">
+  <div class="container-box">
+     <div class="admin-img"></div>
+      <ul class="list">
+          <li><h2>ADMIN LOGIN</h2></li>
+          <li><input type="text" name="ad_username" placeholder="USERNAME"></li>
+          <li><input type="password" name="ad_password" placeholder="PASSWORD"></li>
+          <li><input type="submit" name="submit" value="submit"></li>
+          <li><input type="reset" name="reset" value="reset"></li>
+          <li style="color:red">FORGOT PASSWORD?</li>
+      </ul>
       
-      <ol>
-      
-        <li> <a href="admin_view.php">Admin </a> <br></li>
-        <li><a href="extra_charges_view.php">Extra Charges </a></li>
-        <li><a href="main_category_view.php">Main Category</a></li>
-      <li>  <a href="product_category_view.php">Product Category</a><br></li>
-      <li>  <a href="product_details_view.php">Product Details</a><br></li>
-      <li> <a href="retailers_view.php">Retailers</a><br></li>
-        <li> <a href="stock_details_view.php">Stock Details</a></li>
-          
-    </ol>
+  </div>
+</form>
 </body>
 </html>
